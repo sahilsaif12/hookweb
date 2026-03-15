@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.bun/
+
+# Build outputs
+dist/
+build/
+.turbo/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Prisma
+apps/api/prisma/migrations/
+
+# Test coverage
+coverage/
+
+# Local env files
+apps/api/.env
+.env
+
+# Local env files
+.env
+apps/api/.env
