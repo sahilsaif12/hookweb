@@ -16,6 +16,7 @@ model User {
   sessions     Session[]
 
   @@index([email])
+  @@map("users")
 }
 
 model Session {
@@ -31,6 +32,7 @@ model Session {
   @@index([endpointId])
   @@index([userId])
   @@index([expiresAt])
+  @@map("sessions")
 }
 
 model WebhookRequest {
@@ -46,4 +48,5 @@ model WebhookRequest {
 
   @@index([sessionId, receivedAt(sort: Desc)])
   @@index([receivedAt])
+  @@map("webhook_requests")
 }

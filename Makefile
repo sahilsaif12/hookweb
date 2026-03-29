@@ -71,10 +71,12 @@ ps:
 # ── Database ──────────────────────────────────────────────
 migrate:
 	bunx prisma migrate dev --config apps/api/prisma.config.ts
+	bunx prisma generate --config apps/api/prisma.config.ts
 
 migrate-new:
 	@if [ -z "$(name)" ]; then echo "Usage: make migrate-new name=your_migration_name"; exit 1; fi
 	bunx prisma migrate dev --name $(name) --config apps/api/prisma.config.ts
+	bunx prisma generate --config apps/api/prisma.config.ts
 
 migrate-reset:
 	bunx prisma migrate reset --config apps/api/prisma.config.ts
